@@ -1,0 +1,107 @@
+<div class="curtain">
+	<div class="curtain__wrapper">
+		<input class="try" type="checkbox" checked>
+		<div class="curtain__panel curtain__panel--left">
+			<h1 class="text_left" id="text">Warai</h1>
+		</div>
+		<div class="curtain__prize">
+
+			<div class="container">
+				<%=image_tag("1.png", alt: "head", class: "img-fluid")%>
+				<%=image_tag("bouche.png", alt: "bouche", id:"demo" ,  class: "shake-vertical")%>
+				<audio id="beep">
+					<source src="<%= audio_path 'test.mp3'%>"></source>
+				</audio>
+
+			</div>
+
+			<div class="separateur">
+			</div>
+
+			<div>
+				<%=image_tag("2.png", alt: "up-body", class: "img-fluid")%>
+				<div class="title">Events</div>
+				<div class="text-event">
+
+					<table>
+						<tr>
+							<th>#Quoi ?</th>
+							<th>#Où ?</th>
+							<th>#Quand ?</th>
+						</tr>
+						<tr>
+							<td>Battle</td>
+							<td>Marseille</td>
+							<td>28 Octobre</td>
+						</tr>
+						<tr>
+							<td>Scène</td>
+							<td>Marseille</td>
+							<td>22 Novembre</td>
+						</tr>
+						<tr>
+							<td>Workshop</td>
+							<td>Marseille</td>
+							<td>02 Décembre</td>
+						</tr>
+						<tr>
+							<td>Battle</td>
+							<td>Paris</td>
+							<td>22 Décembre</td>
+						</tr>
+					</table>
+					
+					
+					
+				</div>
+
+				<%=image_tag("2-bis.png", alt: "body-bis", class: "img-bis", id:"img-bis")%>
+
+			</div>
+
+			<div class="separateur">
+			</div>
+
+			<div>
+				<%=image_tag("3.png", alt: "down-body", class: "img-fluid")%>
+			</div>
+
+			<div class="separateur">
+			</div>
+
+		</div>
+
+		<div class="curtain__panel curtain__panel--right">
+			<h1  id="text">Otoko</h1>
+		</div>
+
+	</div>
+</div>
+
+<script>
+
+
+	var beepOne = $("#beep")[0];
+
+	function stopAudio(audio) {
+		audio.pause();
+		audio.currentTime = 0;
+	}
+
+	$("#demo").mouseenter(function() {
+		beepOne.play();
+
+	});
+
+	$("#demo").mouseleave(function() {
+		stopAudio(beepOne);
+	});
+
+	$('.img-bis').click(function(){
+		$(this).fadeOut();
+		$(this).removeClass('img-bis');
+		$(this).addClass('faded');
+	});
+
+</script>
+

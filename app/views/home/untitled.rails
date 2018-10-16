@@ -1,0 +1,39 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+</head>
+<body>
+	<p>
+		Just a sound effect after stupid joke in a blog post about mr. robot tv show (Why was the JavaScript reality show cancelled after only one episode?
+		People thought it seemed scripted. | Now hover.
+	</p>
+	<p>.play() won't force the audio clip to start over unless it's finished first, not very smooth.</p>
+
+	<audio id="beep-one" style="display:none;" controls="controls" preload="auto">
+		<source src="<%= audio_path 'test.mp3'%>"></source>
+		<source src="audio/beep.ogg"></source>
+		Your browser isn't invited for super fun time.
+	</audio>
+	<a id="rimshot-hover-sound" href="#">About</a>
+
+
+	<script>
+
+
+		var beepOne = $("#beep-one")[0];
+		$("#rimshot-hover-sound")
+		.mouseenter(function() {
+			beepOne.play();
+		});
+
+
+
+
+
+		var rimShotAudio = document.getElementById("beep-one"); 
+
+		function playRim() { 
+			rimShotAudio.play(); 
+		} 
+		item.addEventListener('mouseover', rimShotAudio.playRim, false);
+
+	</script>
