@@ -5,24 +5,19 @@
 			<h1 class="text_left" id="text">Warai</h1>
 		</div>
 		<div class="curtain__prize">
-
 			<div class="container">
 				<%=image_tag("1.png", alt: "head", class: "img-fluid")%>
 				<%=image_tag("bouche.png", alt: "bouche", id:"demo" ,  class: "shake-vertical")%>
 				<audio id="beep">
 					<source src="<%= audio_path 'test.mp3'%>"></source>
 				</audio>
-
 			</div>
-
 			<div class="separateur">
 			</div>
-
 			<div>
 				<%=image_tag("2.png", alt: "up-body", class: "img-fluid")%>
 				<div class="title">Events</div>
 				<div class="text-event">
-
 					<table>
 						<tr>
 							<th>#Quoi ?</th>
@@ -50,58 +45,38 @@
 							<td>22 Décembre</td>
 						</tr>
 					</table>
-					
-					
-					
 				</div>
-
 				<%=image_tag("2-bis.png", alt: "body-bis", class: "img-bis", id:"img-bis")%>
-
 			</div>
-
 			<div class="separateur">
 			</div>
-
 			<div>
 				<%=image_tag("3.png", alt: "down-body", class: "img-fluid")%>
 			</div>
-
 			<div class="separateur">
 			</div>
-
 		</div>
-
 		<div class="curtain__panel curtain__panel--right">
 			<h1  id="text">Otoko</h1>
 		</div>
-
 	</div>
 </div>
-
 <script>
-
-
 	var beepOne = $("#beep")[0];
-
 	function stopAudio(audio) {
 		audio.pause();
 		audio.currentTime = 0;
 	}
-
 	$("#demo").mouseenter(function() {
 		beepOne.play();
-
 	});
-
 	$("#demo").mouseleave(function() {
 		stopAudio(beepOne);
 	});
-
 	$('.img-bis').click(function(){
 		$(this).fadeOut();
 		$(this).removeClass('img-bis');
 		$(this).addClass('faded');
 	});
-
 </script>
 
